@@ -3,9 +3,7 @@
 ns.team = BaseCollection.extend(function() {
 this.fetch();
 }, {
-
-	//get all Players from the Mock data. 
-
+	//get all Players from the Mock data.
 	  fetch: function() {
 	    return this.service.request('mock/team.json')
 	      .then(function(data) {

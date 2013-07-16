@@ -3,7 +3,29 @@
 At some point I would like to hook this into the current lineup, so only those on the bench would be displayed.</p>
 
 <div class="addPlayer">View all the Players</div>
+<!--check the count coming back from the model-->
+
+{?player}
 <ul>
-	<li>
-	</li>
+	{#activeModels}
+		<li>
+			<span class="playerName">{Name}</span>
+			<span class="fieldingPosition">{Positions}</span>
+			<span class="throws">Throws: {Throws}</span>
+			<span class="bats">Bats: {Bats}</span>
+		</li>
+  	{/activeModels}
 </ul>
+{/player}
+<div>No players</div>
+	<!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
+		<ul>
+			<li>
+				<div class="portrait" style="background:url(/images/beanie.jpg); width:40px; height:40px; background-size:contain;" />
+				<span class="playerName">Mike Smith</span>
+				<span class="fieldingPosition">CF, P</span>
+				<span class="throws">Throws: R</span>
+				<span class="bats">Bats: R</span>
+			</li>
+
+	</ul>
