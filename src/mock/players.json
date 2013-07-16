@@ -1,0 +1,119 @@
+[
+    {
+    	"Id": 1,
+		"Name": "Paul Pitcher",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "P",
+		"Throws": "R",
+		"Bats": "R"
+	},
+    {
+    	"Id": 2,
+		"Name": "Cameron Catcher",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "C",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 3,
+		"Name": "Frank First",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "1",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 4,
+		"Name": "Scotty Second",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "2",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 5,
+		"Name": "Timmy Third",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "3",
+		"Throws": "R",
+		"Bats": "R"
+	},
+    {
+    	"Id": 6,
+		"Name": "Sammy ShortStop",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "SS",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 7,
+		"Name": "Leon Left",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 8,
+		"Name": "Chris Center",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF",
+		"Throws": "R",
+		"Bats": "R"
+	},
+    {
+    	"Id": 9,
+		"Name": "Reggie Right",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF",
+		"Throws": "R",
+		"Bats": "R"
+	},
+    {
+    	"Id": 10,
+		"Name": "Bobby Bench",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF, P",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 11,
+		"Name": "Brian Bench",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF, P",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 12,
+		"Name": "Blanch Bench",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF, P",
+		"Throws": "R",
+		"Bats": "R"
+	},
+	{
+    	"Id": 13,
+		"Name": "Bernie Bench",
+		"Nickname": "",
+		"Thumbnail": "~\\....png",
+		"Positions": "OF, P",
+		"Throws": "R",
+		"Bats": "R"
+	},
+]
