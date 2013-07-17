@@ -7,7 +7,8 @@ define(function(require) {
       BaseController = require('app/net/BaseController'),
       Translation = require('lavaca/util/Translation'),
       localStore = require('app/cache/localStore'),
-      stateModel = require('app/models/StateModel');
+      stateModel = require('app/models/StateModel'),
+      teamCollection = require('app/models/teamCollection');
 
   /**
    * Example controller
@@ -19,6 +20,10 @@ define(function(require) {
           if (!model) {
         model = {};
       }
+      teamCollection = new teamCollection();
+      teamCollection.fetch()
+      .then(console.log(teamCollection));
+
       var viewProperties = {
         pageTransition: {
           'in': 'pt-page-rotatePullRight pt-page-delay180',
@@ -28,7 +33,7 @@ define(function(require) {
         }
       };
       return this
-        .view(null, AvailableView, model, viewProperties)
+        .view(null, AvailableView, teamCollection, viewProperties)
         .then(this.updateState(model, 'View Available Players Page', params.url));
     }
   });

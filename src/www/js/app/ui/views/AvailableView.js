@@ -2,14 +2,14 @@ define(function(require) {
 
   var BaseView = require('./BaseView');
   require('rdust!templates/available');
-  var Config = require('lavaca/util/Config');
-
   /**
    * SetLineup view type
    * @class app.ui.views.SetLineup
    * @extends app.ui.views.BaseView
    */
-  var AvailableView = BaseView.extend({
+  var AvailableView = BaseView.extend(function(){
+    BaseView.apply(this, arguments);
+  },{
     /**
      * The name of the template used by the view
      * @property {String} template
@@ -21,7 +21,14 @@ define(function(require) {
      * @property {String} className
      * @default 'example'
      */
-    className: 'available'
+    className: 'available',
+    onRenderSuccess: function(){
+      BaseView.prototype.onRenderSuccess.apply(this, arguments);
+
+    setTimeout(function(){
+      console.log(this.model);
+    }, 3000);
+    }
 
   });
 
