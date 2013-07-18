@@ -27,7 +27,7 @@ define(function(require) {
       }
       return this
         .view(null, ExampleView, model)
-        .then(this.updateState(model, 'Home Page', params.url));
+        .then(this.updateState(model, 'Jardineros Lineup', params.url));
     },
     /**
      * Switches the user to a specific language

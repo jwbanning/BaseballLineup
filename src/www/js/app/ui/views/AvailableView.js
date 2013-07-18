@@ -25,9 +25,6 @@ define(function(require) {
     onRenderSuccess: function(){
       BaseView.prototype.onRenderSuccess.apply(this, arguments);
 
-    setTimeout(function(){
-      console.log(this.model);
-    }, 3000);
     }
 
   });

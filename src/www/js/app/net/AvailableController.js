@@ -8,6 +8,7 @@ define(function(require) {
       Translation = require('lavaca/util/Translation'),
       localStore = require('app/cache/localStore'),
       stateModel = require('app/models/StateModel'),
+      Promise = require('lavaca/util/Promise'),
       teamCollection = require('app/models/teamCollection');
 
   /**
@@ -17,24 +18,29 @@ define(function(require) {
    */
   var AvailableController = BaseController.extend({
     list: function(params, model) {
-          if (!model) {
+      var promise = new Promise(this);
+      if (!model) {
         model = {};
       }
       teamCollection = new teamCollection();
-      teamCollection.fetch()
-      .then(console.log(teamCollection));
-
-      var viewProperties = {
-        pageTransition: {
-          'in': 'pt-page-rotatePullRight pt-page-delay180',
-          'out': 'pt-page-rotatePushLeft',
-          'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
-          'outReverse': 'pt-page-rotatePushRight'
-        }
-      };
-      return this
-        .view(null, AvailableView, teamCollection, viewProperties)
-        .then(this.updateState(model, 'View Available Players Page', params.url));
+      teamCollection.fetch('/mock/team.json')
+        .then(function() {
+          var viewProperties = {
+                pageTransition: {
+                  'in': 'pt-page-rotatePullRight pt-page-delay180',
+                  'out': 'pt-page-rotatePushLeft',
+                  'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
+                  'outReverse': 'pt-page-rotatePushRight'
+                }
+              };
+          this
+            .view(null, AvailableView, teamCollection, viewProperties)
+            .then(function() {
+              this.updateState(model, 'Available Players', params.url);
+              promise.resolve();
+            }.bind(this));
+        }.bind(this));
+      return promise;
     }
   });
 

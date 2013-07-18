@@ -1,23 +1,27 @@
-<h1>{@msg key="headline"/}</h1>
-<p>Currently this lists all the Players</br>
-At some point I would like to hook this up to consider the current lineup, so only those on the bench would be displayed.</p>
+<div class="overflow-scroll">
+  <div class="textContent">
+    <!--<h1>{@msg key="headline"/}</h1>-->
+    <p>Currently this lists all the Players</br>
+    At some point I would like to hook this up to consider the current lineup, so only those on the bench would be displayed.</p>
+  </div>
 
-<!--check the count coming back from the model-->
-{@contextDump to="console" /}
+<!--check the count coming back from the model
+-->
 
-{?player}
-		<ul>
-			<li>
-				<div class="portrait" style="background:url(/images/beanie.jpg); background-size:contain;" />
-				<div class='metaContainer'>
-					<span class="playerName">Mike Smith</span>
-					<span class="fieldingPosition">CF, P</span>
-					<span class="throws">Throws: R</span>
-					<span class="bats">Bats: R</span>
-				</div>
-			</li>
-		</ul>
-{/player}
-<div>No players</div>
-	<!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
-		
+  <ul>
+    {#player}
+      <li>
+        <div class="portrait" style="background:url(/images/profile/{Thumbnail}); background-size:contain;" />
+        <div class='metaContainer'>
+          <span class="playerName">{Name}</span>
+          <span class="fieldingPosition">{Positions}</span>
+          <div class="statsContainer">
+            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+          </div>
+        </div>
+      </li>
+    {/player}
+  </ul>
+  <!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
+</div>
