@@ -5,6 +5,7 @@ define(function(require) {
   var ExampleController = require('./net/ExampleController');
   var SetLineupController = require('./net/SetLineupController');
   var AvailableController = require('./net/AvailableController');
+  var FieldController = require('./net/FieldController');
   var Connectivity = require('lavaca/net/Connectivity');
   var Application = require('lavaca/mvc/Application');
   var LoadingIndicator = require('lavaca/ui/LoadingIndicator');
@@ -40,9 +41,10 @@ define(function(require) {
       '/lang': [ExampleController, 'lang'],
       '/test': [ExampleController, 'test'],
       '/set_lineup': [SetLineupController, 'home'],
+      '/field': [FieldController, 'list'],
       '/available': [AvailableController, 'list']
       //,
-      //'/field': [FieldController, 'field']
+      
     });
     stateModel.set('lang', localStore.get('lang') || 'en_US');
     //initialize translations
