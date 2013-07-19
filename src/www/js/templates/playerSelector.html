@@ -1,9 +1,17 @@
+
 <div class="playerSelectorContainer">
-  <ul>
-    {#player}
-    <li>
-      <div class="portrait" style="background:url(/images/profile/{Thumbnail}); background-size:contain;" />
-    </li>
-    {/player}
-  </ul>
+  <div class="scrollContainer">
+    <ul>
+      {#player}
+      <li class="draggable">
+        <div class="portrait" style="background:url(/images/profile/{Thumbnail}); background-size:contain;" />
+      </li>
+      {/player}
+    </ul>
+  </div>
 </div>
+<script>
+    $(function() {
+      $( ".draggable" ).draggable();
+    });
+  </script>

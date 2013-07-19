@@ -9,42 +9,53 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 .playerSelectorContainer{
-  width:320px;
-  ul{
-    li{
-      display:inline;
-      .portrait{
-        display: inline-block;
-        position:relative;
-        width:40px;
-        height:40px;
-        z-index: 2;
-        -webkit-border-top-right-radius: 9999px;
-        -webkit-border-bottom-right-radius: 9999px;
-        -webkit-border-bottom-left-radius: 9999px;
-        -webkit-border-top-left-radius: 9999px;
-        -moz-border-radius-topright: 9999px;
-        -moz-border-radius-bottomright: 9999px;
-        -moz-border-radius-bottomleft: 9999px;
-        -moz-border-radius-topleft: 9999px;
-        border-top-right-radius: 9999px;
-        border-bottom-right-radius: 9999px;
-        border-bottom-left-radius: 9999px;
-        border-top-left-radius: 9999px;
-        -moz-background-clip: padding;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
-        -moz-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
-        -webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
-        -ms-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
-        -o-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
-        transform: scale3d(1,1,1);
-        -moz-transform: scale3d(1,1,1);
-        -webkit-transform: scale3d(1,1,1);
-        -ms-transform: scale3d(1,1,1);
-        -o-transform: scale3d(1,1,1);
-        box-sizing: content-box;
+  //overflow-x: scroll;
+  //overflow-y: hidden;
+  display: block;
+  position: relative;
+  width: 320px;
+  height:45px;
+  .scrollContainer{
+      width: 1900px;
+      height: 100%;
+    ul{
+      li{
+        position: relative;
+        display:inline-block ;
+        padding:0 5px;
+        .portrait{
+          display: inline-block;
+          position:relative;
+          width:40px;
+          height:40px;
+          z-index: 2;
+          -webkit-border-top-right-radius: 9999px;
+          -webkit-border-bottom-right-radius: 9999px;
+          -webkit-border-bottom-left-radius: 9999px;
+          -webkit-border-top-left-radius: 9999px;
+          -moz-border-radius-topright: 9999px;
+          -moz-border-radius-bottomright: 9999px;
+          -moz-border-radius-bottomleft: 9999px;
+          -moz-border-radius-topleft: 9999px;
+          border-top-right-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-bottom-left-radius: 9999px;
+          border-top-left-radius: 9999px;
+          -moz-background-clip: padding;
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
+          -moz-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
+          -webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
+          -ms-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
+          -o-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.15);
+          transform: scale3d(1,1,1);
+          -moz-transform: scale3d(1,1,1);
+          -webkit-transform: scale3d(1,1,1);
+          -ms-transform: scale3d(1,1,1);
+          -o-transform: scale3d(1,1,1);
+          box-sizing: content-box;
+        }
       }
     }
   }

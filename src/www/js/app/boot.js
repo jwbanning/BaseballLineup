@@ -5,6 +5,7 @@ require.config({
     '$': 'libs/jquery-2.0.0',
     'jquery': 'libs/jquery-2.0.0',
     'jquery-mobile': 'libs/jquery-mobile',
+    'jquery-ui': 'libs/jquery-ui',
     'cordova': 'libs/cordova',
     'mout': 'libs/mout/src',
     'docCookies': 'libs/docCookies',
@@ -29,6 +30,9 @@ require.config({
     },
     templates: {
       deps: ['dust']
+    },
+    'jquery-ui': {
+      deps: ['$']
     }
   }
 });
