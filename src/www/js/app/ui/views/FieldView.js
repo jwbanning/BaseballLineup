@@ -1,6 +1,7 @@
 define(function(require) {
 
-  var BaseView = require('./BaseView');
+  var BaseView = require('./BaseView'), 
+    PlayerSelectorView = require('./PlayerSelectorView');
   require('rdust!templates/field');
   /**
    * SetLineup view type
@@ -9,6 +10,16 @@ define(function(require) {
    */
   var FieldView = BaseView.extend(function(){
     BaseView.apply(this, arguments);
+    this.mapEvent({
+
+    });
+    this.mapChildView({
+      '.slider-container': {
+      TView: PlayerSelectorView,
+      model: this.model
+    }
+  });
+
   },{
     /**
      * The name of the template used by the view
