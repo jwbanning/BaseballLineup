@@ -23,13 +23,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         height: 100%;
         background-size: contain;
         margin: 0 auto;
-        text-align: center;
         background-position: center;
+        p{
+          text-align: center;
+          margin:0;
+        }
         .droppable{
           border: solid 1px red;
           position: absolute;
           height: 60px;
           width: 60px;
+        }
+        .ui-state-highlight.droppable{
+          border: none;
         }
         .pitcher{bottom:90px;right:132px;}
         .catcher{bottom:12px;right:132px;}

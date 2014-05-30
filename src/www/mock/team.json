@@ -7,7 +7,9 @@
 			"Thumbnail": "beanie.jpg",
 			"Positions": "Utility",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": "2"
 		},
 	  {
 	    "Id": 2,
@@ -16,7 +18,9 @@
 			"Thumbnail": "SteveHunt.jpg",
 			"Positions": "2nd",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": "3"
 		},
 		{
 	    "Id": 3,
@@ -25,7 +29,9 @@
 			"Thumbnail": "markWord.jpeg",
 			"Positions": "OF",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": "4"
 		},
 		{
 	    "Id": 4,
@@ -34,7 +40,9 @@
 			"Thumbnail": "BrianMyers.jpeg",
 			"Positions": "Utility",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": "1"
 		},
 		{
 	    "Id": 5,
@@ -43,7 +51,9 @@
 			"Thumbnail": "Bill.jpeg",
 			"Positions": "1st",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": "6"
 		},
 	  {
 	    "Id": 6,
@@ -52,7 +62,9 @@
 			"Thumbnail": "Nate.jpeg",
 			"Positions": "C, 2nd, 3rd",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"7",
+			"battingPosition": "6"
 		},
 		{
 	    "Id": 7,
@@ -61,7 +73,9 @@
 			"Thumbnail": "Greg.jpeg",
 			"Positions": "Utility",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 8,
@@ -70,7 +84,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "Utility",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 	  {
 	    "Id": 9,
@@ -79,7 +95,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": "9"
 		},
 	  {
 	    "Id": 10,
@@ -88,7 +106,9 @@
 			"Thumbnail": "Branson.jpg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 11,
@@ -97,7 +117,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 12,
@@ -106,7 +128,9 @@
 			"Thumbnail": "JohnTatum.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": "8"
 		},
 		{
 	    "Id": 13,
@@ -115,7 +139,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 14,
@@ -124,7 +150,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 15,
@@ -133,7 +161,9 @@
 			"Thumbnail": "garin.jpeg",
 			"Positions": "C",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 16,
@@ -142,7 +172,9 @@
 			"Thumbnail": "Linc.jpeg",
 			"Positions": "OF, 3rd",
 			"Throws": "R",
-			"Bats": "R"
+			"Bats": "R",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 17,
@@ -151,7 +183,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 18,
@@ -160,7 +194,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 19,
@@ -169,7 +205,9 @@
 			"Thumbnail": "Thai.jpg",
 			"Positions": "P, C, Infield.",
 			"Throws": "R",
-			"Bats": "S"
+			"Bats": "S",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 20,
@@ -178,7 +216,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 21,
@@ -187,7 +227,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 22,
@@ -196,7 +238,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 23,
@@ -205,7 +249,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 24,
@@ -214,7 +260,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 25,
@@ -223,7 +271,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 26,
@@ -232,7 +282,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 27,
@@ -241,7 +293,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 28,
@@ -250,7 +304,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 29,
@@ -259,7 +315,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 30,
@@ -268,7 +326,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 31,
@@ -277,7 +337,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 32,
@@ -286,7 +348,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 33,
@@ -295,7 +359,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		},
 		{
 	    "Id": 34,
@@ -304,7 +370,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "N/A",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"inTheField":"",
+			"battingPosition": ""
 		}
 	]
 }

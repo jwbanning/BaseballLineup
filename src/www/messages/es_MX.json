@@ -1,5 +1,5 @@
 {
-  "headline": "¡Hola, mundo!",
+  "headline": "Aplicación muestra béisbol LineUp Manager",
   "choose_language": "Elija su idioma:",
   "error_required": "{0} es un campo obligatorio",
   "error_pattern": "{0} no tiene el formato correcto",

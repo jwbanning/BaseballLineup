@@ -1,6 +1,6 @@
 
 <div class="playerSelectorContainer">
-  <div class="scrollContainer">
+  <div class="scrollContainer" id="scrollContainer">
     <ul>
       {#player}
       <li class="draggable">
@@ -12,6 +12,27 @@
 </div>
 <script>
     $(function() {
-      $( ".draggable" ).draggable({ containment: ".fake", scroll: false });
+      $( ".draggable" ).draggable({
+        containment: ".fake",
+        scroll: false,
+        revert: "invalid"
+      });
+      //cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+      //revert: "invalid", // when not dropped, the item will revert back to its initial position
+      //containment: "document",
+      //helper: "clone",
+      //cursor: "move"
+
+
+
+      $( ".droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "" );
+      }
+      });
     });
+    //var myScroll = new iScroll('scrollContainer', { hScroll: true, vScroll: false, hScrollbr: true });
   </script>

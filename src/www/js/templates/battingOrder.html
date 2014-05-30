@@ -1,0 +1,28 @@
+<div class="overflow-scroll">
+  <div class="textContent">
+    <!--<h1>{@msg key="headline"/}</h1>-->
+    <p>Lists the current batting order</p>
+    <p>At some point I would like to hook this up to be able to drag and drop the order of the batters.</p>
+  </div>
+
+  <ul>
+    {#player}
+      {@select key=battingPosition}
+        {@lte value=9}
+          <li>
+            <div class="portrait" style="background:url(/images/profile/{Thumbnail}); background-size:contain;" />
+            <div class='metaContainer'>
+              <span class="playerName">{Name}</span>
+              <span class="fieldingPosition">{Positions}</span>
+              <div class="statsContainer">
+                <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+                <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+              </div>
+            </div>
+          </li>
+        {/lte}
+      {/select}
+    {/player}
+  </ul>
+  <!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
+</div>
