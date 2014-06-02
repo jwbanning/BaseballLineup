@@ -1,3 +1,24 @@
+Changed in 2.3.2
+======
+* Switched bower.json to link to latest of lavaca
+
+Changed in 2.3.1
+======
+* Version bump to match core
+
+Changed in 2.3.0
+======
+* Updated project to use bower for client-side dependecies including lavaca-core
+* updated readme with new build steps
+* bug fix for routing back logic in BaseView
+
+Changed in 2.2.0
+======
+* Separated Lavaca's core javascript into another repo
+* Moved from https://github.com/mutualmobile/lavaca to https://github.com/mutualmobile/lavaca-starter
+* Simplified app into a better starter app
+* Added support for Cordova 3.0 support
+
 Changed in 2.0.4
 ======
 * Fix for Disposing of childviews and widgets in View.js

@@ -1,6 +1,6 @@
 define(function(require) {
 
-  var BaseView = require('./BaseView'), 
+  var BaseView = require('./BaseView'),
     PlayerSelectorView = require('./PlayerSelectorView');
   require('rdust!templates/field');
   /**

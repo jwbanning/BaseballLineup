@@ -1,7 +1,7 @@
 define(function(require) {
 
   var Detection = require('lavaca/env/Detection'),
-      PageView = require('lavaca/mvc/PageView'),
+      View = require('lavaca/mvc/View'),
       Promise = require('lavaca/util/Promise'),
       viewManager = require('lavaca/mvc/ViewManager'),
       History = require('lavaca/net/History');
@@ -15,8 +15,8 @@ define(function(require) {
    * @extends Lavaca.mvc.View
    *
    */
-  var BaseView = PageView.extend(function() {
-    PageView.apply(this, arguments);
+  var BaseView = View.extend(function() {
+    View.apply(this, arguments);
     this.mapEvent('.cancel', 'tap', this.onTapCancel);
   }, {
 
@@ -48,7 +48,7 @@ define(function(require) {
      *   that contains the template's rendered HTML output.
      */
     onRenderSuccess: function() {
-      PageView.prototype.onRenderSuccess.apply(this, arguments);
+      View.prototype.onRenderSuccess.apply(this, arguments);
     },
     /**
      * Handler for when a cancel control is tapped
@@ -71,17 +71,18 @@ define(function(require) {
      * @return {Lavaca.util.Promise} A promise
      */
     enter: function(container, exitingViews) {
-      return PageView.prototype.enter.apply(this, arguments)
+      var isRoutingBack = History.isRoutingBack;
+      return View.prototype.enter.apply(this, arguments)
         .then(function() {
-          if (History.isRoutingBack) {
+          if (isRoutingBack) {
             if (History.animationBreadcrumb.length > 0) {
               this.pageTransition = History.animationBreadcrumb.pop();
             }
           } else {
             History.animationBreadcrumb.push(this.pageTransition);
           }
-          var animationIn = History.isRoutingBack ? this.pageTransition['inReverse']:this.pageTransition['in'],
-              animationOut = History.isRoutingBack ? this.pageTransition['outReverse']:this.pageTransition['out'],
+          var animationIn = isRoutingBack ? this.pageTransition['inReverse']:this.pageTransition['in'],
+              animationOut = isRoutingBack ? this.pageTransition['outReverse']:this.pageTransition['out'],
               i = -1,
               exitingView;
 
@@ -149,7 +150,7 @@ define(function(require) {
 
         this.shell
           .nextAnimationEnd(function() {
-            PageView.prototype.exit.apply(this, arguments).then(function() {
+            View.prototype.exit.apply(this, arguments).then(function() {
               this.exitPromise.resolve();
             });
             this.shell.removeClass(animation + ' current');
@@ -159,7 +160,7 @@ define(function(require) {
         return this.exitPromise;
       } else {
         this.shell.removeClass('current');
-        return PageView.prototype.exit.apply(this, arguments);
+        return View.prototype.exit.apply(this, arguments);
       }
     }
   });
