@@ -7,7 +7,7 @@ define(function(require) {
    * @class app.ui.views.SetLineup
    * @extends app.ui.views.BaseView
    */
-  var availablePlayersView = BaseView.extend(function(){
+  var AvailablePlayersView = BaseView.extend(function(){
     BaseView.apply(this, arguments);
     this.mapEvent({
       'model': {
@@ -37,6 +37,6 @@ define(function(require) {
 
   });
 
-  return availablePlayersView;
+  return AvailablePlayersView;
 
 });
