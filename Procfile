@@ -1,1 +1,1 @@
-web: grunt build:production; grunt server:prod
+web: grunt build:production; grunt server
