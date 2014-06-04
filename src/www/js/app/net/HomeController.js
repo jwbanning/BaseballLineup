@@ -90,7 +90,7 @@ define(function(require) {
       };
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, AvailablePlayersView, p, viewProperties)
+        .view(null, availablePlayersView, p, viewProperties)
         .then(this.updateState(model, 'Available Players', params.url));
     },
     batting_order: function(params, model) {
