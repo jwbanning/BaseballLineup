@@ -5,11 +5,11 @@ define(function(require) {
       stateModel = require('app/models/StateModel'),
       Promise = require('lavaca/util/Promise'),
       BattingOrderView = require('app/ui/views/BattingOrderView'),
-      AvailableView = require('app/ui/views/availablePlayersView'),
+      AvailablePlayersView = require('app/ui/views/AvailablePlayersView'),
       FieldView = require('app/ui/views/FieldView'),
-      teamCollection = require('app/models/TeamCollection'),
+      TeamCollection = require('app/models/TeamCollection'),
       Model = require('lavaca/mvc/Model');
-      var m = new teamCollection();
+      var m = new TeamCollection();
       var p = m;
 
   /**
@@ -72,7 +72,7 @@ define(function(require) {
       };
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, AvailableView, p, viewProperties)
+        .view(null, AvailablePlayersView, p, viewProperties)
         .then(this.updateState(model, 'Available Players', params.url));
     },
     batting_order: function(params, model) {
