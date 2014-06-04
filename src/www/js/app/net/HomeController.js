@@ -5,7 +5,7 @@ define(function(require) {
       stateModel = require('app/models/StateModel'),
       Promise = require('lavaca/util/Promise'),
       BattingOrderView = require('app/ui/views/BattingOrderView'),
-      availablePlayersView = require('app/ui/views/availablePlayersView'),
+      AvailableView = require('app/ui/views/availablePlayersView'),
       FieldView = require('app/ui/views/fieldView'),
       teamCollection = require('app/models/teamCollection'),
       Model = require('lavaca/mvc/Model');
@@ -40,22 +40,6 @@ define(function(require) {
       stateModel.set('lang', locale);
       return this.redirect('/?lang={0}', [locale]);
     },
-    // something: function(params, model) {
-    //   if (!model) {
-    //     model = {};
-    //   }
-    //   var viewProperties = {
-    //     pageTransition: {
-    //       'in': 'pt-page-rotatePullRight pt-page-delay180',
-    //       'out': 'pt-page-rotatePushLeft',
-    //       'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
-    //       'outReverse': 'pt-page-rotatePushRight'
-    //     }
-    //   };
-    //   return this
-    //     .view(null, TestView, model, viewProperties)
-    //     .then(this.updateState(model, 'Test Page', params.url));
-    // },
      field: function(params, model) {
       if (!model) {
         model = {};
@@ -69,8 +53,6 @@ define(function(require) {
         },
         sort: 'Name'
       };
-      
-      // teamCollection.sort('battingPosition', false);
       return this
         .view(null, FieldView, p, viewProperties)
         .then(this.updateState(model, 'Who is Where', params.url));
@@ -90,7 +72,7 @@ define(function(require) {
       };
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, availablePlayersView, p, viewProperties)
+        .view(null, AvailableView, p, viewProperties)
         .then(this.updateState(model, 'Available Players', params.url));
     },
     batting_order: function(params, model) {
