@@ -4,7 +4,7 @@ define(function(require) {
       BaseController = require('app/net/BaseController'),
       stateModel = require('app/models/StateModel'),
       Promise = require('lavaca/util/Promise'),
-      BattingOrderView = require('app/ui/views/battingOrderView'),
+      BattingOrderView = require('app/ui/views/BattingOrderView'),
       AvailablePlayersView = require('app/ui/views/availablePlayersView'),
       FieldView = require('app/ui/views/fieldView'),
       teamCollection = require('app/models/teamCollection'),
