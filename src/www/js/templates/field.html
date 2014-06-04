@@ -40,5 +40,27 @@
     </div>
   </div>
   <div class="slider-container">
+    <h1>Who is available</h1>
+    <ul>
+      {#player}
+        {^inTheField} 
+          <li>
+            <div class="available" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}</p></div>
+          </li>
+        {/inTheField} 
+      {/player}
+    </ul>
+  </div>
+    <div class="slider-container">
+    <h1>Who has played</h1>
+    <ul>
+      {#player}
+        {^inTheField} 
+          <li>
+            <div class="available" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}</p></div>
+          </li>
+        {/inTheField} 
+      {/player}
+    </ul>
   </div>
 </div>
