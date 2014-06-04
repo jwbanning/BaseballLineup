@@ -8,10 +8,8 @@ define(function(require) {
   });
 
   function _fetch() {
+    // debugger;
     this.fetch('/mock/team.json').always(function(response) {
-      // console.log(this.toObject());
-      // console.log(response)
-      debugger;
       this.sort('battingPosition', false);
       this.trigger('change');
     });

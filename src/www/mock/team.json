@@ -9,7 +9,7 @@
 			"Throws": "R",
 			"Bats": "R",
 			"battingPosition": 2,
-			"inTheField":""
+			"inTheField": 8
 
 		},
 	  {
@@ -21,7 +21,7 @@
 			"Throws": "R",
 			"Bats": "R",
 			"battingPosition": 3,
-			"inTheField":""
+			"inTheField": 7
 		},
 		{
 	    "Id": 3,
@@ -32,7 +32,7 @@
 			"Throws": "R",
 			"Bats": "R",
 			"battingPosition": 4,
-			"inTheField":""
+			"inTheField": 6
 
 		},
 		{
@@ -44,7 +44,7 @@
 			"Throws": "R",
 			"Bats": "R",
 			"battingPosition": 1,
-			"inTheField":""
+			"inTheField": 9
 
 		},
 		{
@@ -56,7 +56,7 @@
 			"Throws": "N/A",
 			"Bats": "N/A",
 			"battingPosition": 6,
-			"inTheField":""
+			"inTheField": 4
 		},
 	  {
 	    "Id": 6,
@@ -66,9 +66,8 @@
 			"Positions": "C, 2nd, 3rd",
 			"Throws": "N/A",
 			"Bats": "N/A",
-			"battingPosition":"",
-			"inTheField":"7"
-
+			"battingPosition": 5,
+			"inTheField": 5
 		},
 		{
 	    "Id": 7,
@@ -77,7 +76,9 @@
 			"Thumbnail": "Greg.jpeg",
 			"Positions": "Utility",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"battingPosition":"",
+			"inTheField": ""
 		},
 		{
 	    "Id": 8,
@@ -86,7 +87,9 @@
 			"Thumbnail": "noImage.jpeg",
 			"Positions": "Utility",
 			"Throws": "N/A",
-			"Bats": "N/A"
+			"Bats": "N/A",
+			"battingPosition":"",
+			"inTheField": ""
 		},
 	  {
 	    "Id": 9,
@@ -97,7 +100,7 @@
 			"Throws": "N/A",
 			"Bats": "N/A",
 			"battingPosition": 9,
-			"inTheField":""
+			"inTheField": 1
 		},
 	  {
 	    "Id": 10,
@@ -130,7 +133,7 @@
 			"Throws": "N/A",
 			"Bats": "N/A",
 			"battingPosition": 8,
-			"inTheField":""
+			"inTheField": 2
 
 		},
 		{
@@ -372,8 +375,8 @@
 			"Positions": "N/A",
 			"Throws": "N/A",
 			"Bats": "N/A",
-			"inTheField":"",
-			"battingPosition":""
+			"inTheField": 3,
+			"battingPosition": 7
 		}
 	]
 }

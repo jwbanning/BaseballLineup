@@ -224,8 +224,8 @@ module.exports = function( grunt ) {
           hostname: '0.0.0.0',
           base: 'build/www',
           apiPrefix: '/api*',
-          authUser: 'username',
-          authPassword: 'password'
+          // authUser: 'username',
+          // authPassword: 'password'
         }
       },
       doc: {

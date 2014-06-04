@@ -6,6 +6,7 @@ define(function(require) {
       Promise = require('lavaca/util/Promise'),
       BattingOrderView = require('app/ui/views/battingOrderView'),
       AvailablePlayersView = require('app/ui/views/availablePlayersView'),
+      FieldView = require('app/ui/views/fieldView'),
       teamCollection = require('app/models/teamCollection'),
       Model = require('lavaca/mvc/Model');
 
@@ -53,6 +54,25 @@ define(function(require) {
     //     .view(null, TestView, model, viewProperties)
     //     .then(this.updateState(model, 'Test Page', params.url));
     // },
+     field: function(params, model) {
+      if (!model) {
+        model = {};
+      }
+      var viewProperties = {
+        pageTransition: {
+          'in': 'pt-page-rotatePullRight pt-page-delay180',
+          'out': 'pt-page-rotatePushLeft',
+          'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
+          'outReverse': 'pt-page-rotatePushRight'
+        },
+        sort: 'Name'
+      };
+      teamCollection = new teamCollection();
+      // teamCollection.sort('battingPosition', false);
+      return this
+        .view(null, FieldView, teamCollection, viewProperties)
+        .then(this.updateState(model, 'Who is Where', params.url));
+    },
     available_players: function(params, model) {
       if (!model) {
         model = {};
@@ -64,7 +84,7 @@ define(function(require) {
           'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
           'outReverse': 'pt-page-rotatePushRight'
         },
-        sort: ''
+        sort: 'Name'
       };
       teamCollection = new teamCollection();
       // teamCollection.sort('battingPosition', false);

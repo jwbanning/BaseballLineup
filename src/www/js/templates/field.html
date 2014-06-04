@@ -2,30 +2,41 @@
 <div class="fake"></div>
   <div class="container">
     <div class="playingField">
-      <!--Place the various players in the correct positions-->
-      <!--
-      <div class="fielder p" style="background:url(/images/profile/beanie.jpg); background-size:contain;" ></div>
-      <div class="fielder c" style="background:url(/images/profile/Bill.jpeg); background-size:contain;"></div>
-      <div class="fielder f" style="background:url(/images/profile/BrianMyers.jpeg); background-size:contain;"></div>
-      <div class="fielder s" style="background:url(/images/profile/Greg.jpeg); background-size:contain;"></div>
-      <div class="fielder t" style="background:url(/images/profile/JohnTatum.jpeg); background-size:contain;"></div>
-      <div class="fielder ss" style="background:url(/images/profile/markWord.jpeg); background-size:contain;"></div>
-      <div class="fielder lf" style="background:url(/images/profile/Nate.jpeg); background-size:contain;"></div>
-      <div class="fielder cf" style="background:url(/images/profile/SteveHunt.jpg); background-size:contain;"></div>
-      <div class="fielder rf" style="background:url(/images/profile/noImage.jpeg); background-size:contain;"></div>
-      -->
-      <div class="droppable pitcher"><p>Pitcher</p></div>
-      <div class="droppable catcher"><p>Catcher</p></div>
+      {#player}
+        {?inTheField}
+          {@select key="{inTheField}"}
+            {@eq value="1"}
+              <div class="droppable pitcher fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Pitcher</p></div>
+            {/eq}
+            {@eq value="2"}
+               <div class="droppable catcher fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Catcher</p></div>
+            {/eq}
+            {@eq value="3"}
+              <div class="droppable firstBase fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}First</p></div>
+            {/eq}
 
-      <div class="droppable firstBase"><p>First</p></div>
-      <div class="droppable secondBase"><p>Second</p></div>
-      <div class="droppable thirdBase"><p>Third</p></div>
-      <div class="droppable shortstop"><p>Short</p></div>
+            {@eq value="4"}
+              <div class="droppable secondBase fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Second</p></div>
+            {/eq}
+              {@eq value="5"}
+              <div class="droppable thirdBase fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Third</p></div>
+            {/eq}
 
-      <div class="droppable leftField"><p>Left</p></div>
-      <div class="droppable centerField"><p>Center</p></div>
-      <div class="droppable rightField"><p>Right</p></div>
-
+            {@eq value="6"}
+              <div class="droppable shortstop fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Short</p></div>
+            {/eq}
+            {@eq value="7"}
+              <div class="droppable leftField fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Left</p></div>
+            {/eq}
+            {@eq value="8"}
+              <div class="droppable centerField fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Center</p></div>
+            {/eq}
+            {@eq value="9"}
+              <div class="droppable rightField fielder" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;"><p>{Name}Right</p></div>
+            {/eq}
+          {/select}
+        {/inTheField} 
+      {/player}
     </div>
   </div>
   <div class="slider-container">

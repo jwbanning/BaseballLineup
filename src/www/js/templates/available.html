@@ -10,9 +10,10 @@
 -->
 
   <ul>
+    {@contextDump to="console" /}
     {#player}
       <li>
-        <div class="portrait" style="background:url(/images/profile/{Thumbnail}); background-size:contain;" />
+        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
         <div class='metaContainer'>
           <span class="playerName">{Name}</span>
           <span class="fieldingPosition">{Positions}</span>

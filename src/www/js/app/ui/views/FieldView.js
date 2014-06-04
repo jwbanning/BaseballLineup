@@ -1,7 +1,6 @@
 define(function(require) {
 
-  var BaseView = require('./BaseView'),
-    PlayerSelectorView = require('./PlayerSelectorView');
+  var BaseView = require('./BaseView');
   require('rdust!templates/field');
   /**
    * SetLineup view type
@@ -11,15 +10,11 @@ define(function(require) {
   var FieldView = BaseView.extend(function(){
     BaseView.apply(this, arguments);
     this.mapEvent({
+      'model': {
+        'change': this.redrawView.bind(this)
+      }
 
     });
-    this.mapChildView({
-      '.slider-container': {
-      TView: PlayerSelectorView,
-      model: this.model
-    }
-  });
-
   },{
     /**
      * The name of the template used by the view
@@ -35,7 +30,9 @@ define(function(require) {
     className: 'field',
     onRenderSuccess: function(){
       BaseView.prototype.onRenderSuccess.apply(this, arguments);
-
+    },
+    redrawView:function() {
+      this.redraw();
     }
 
   });
@@ -43,3 +40,5 @@ define(function(require) {
   return FieldView;
 
 });
+
+

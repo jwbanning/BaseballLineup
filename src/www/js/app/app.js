@@ -23,8 +23,8 @@ define(function(require) {
     this.router.add({
       '/': [HomeController, 'index'],
       '/batting_order': [HomeController, 'batting_order'],
-      '/available_player': [HomeController, 'available_players']
-
+      '/available_player': [HomeController, 'available_players'],
+      '/field': [HomeController, 'field']
     });
     // Initialize messages
     Translation.init('en_US');
