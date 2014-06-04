@@ -9,6 +9,8 @@ define(function(require) {
       FieldView = require('app/ui/views/fieldView'),
       teamCollection = require('app/models/teamCollection'),
       Model = require('lavaca/mvc/Model');
+      var m = new teamCollection();
+      var p = m;
 
   /**
    * Home controller
@@ -67,10 +69,10 @@ define(function(require) {
         },
         sort: 'Name'
       };
-      teamCollection = new teamCollection();
+      
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, FieldView, teamCollection, viewProperties)
+        .view(null, FieldView, p, viewProperties)
         .then(this.updateState(model, 'Who is Where', params.url));
     },
     available_players: function(params, model) {
@@ -86,10 +88,9 @@ define(function(require) {
         },
         sort: 'Name'
       };
-      teamCollection = new teamCollection();
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, AvailablePlayersView, teamCollection, viewProperties)
+        .view(null, AvailablePlayersView, p, viewProperties)
         .then(this.updateState(model, 'Available Players', params.url));
     },
     batting_order: function(params, model) {
@@ -105,10 +106,9 @@ define(function(require) {
         },
         sort: 'battingPosition'
       };
-      teamCollection = new teamCollection();
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, BattingOrderView, teamCollection, viewProperties)
+        .view(null, BattingOrderView, p, viewProperties)
         .then(this.updateState(model, 'Current Batting Order', params.url));
     }
   });
