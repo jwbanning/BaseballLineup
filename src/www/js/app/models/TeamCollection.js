@@ -1,5 +1,5 @@
 define(function(require) {
-  var Collection = require('lavaca/mvc/collection');
+  var Collection = require('lavaca/mvc/Collection');
   var TeamCollection = Collection.extend(function() {
     Collection.apply(this, arguments);
     _fetch.call(this);
