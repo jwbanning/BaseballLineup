@@ -12,49 +12,65 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .fieldWrapper{
 
     .container{
-      padding-top: 10px;
+      // padding-top: 10px;
       //width:320px;
-      height:340px;
+      height:202px;
       .playingField{
         //background: url(/../images/baseballPark.png);
-        background: url(/assets/img/baseballPark.png) no-repeat;
+        background: url(/assets/img/perspectiveField.jpg) no-repeat;
         position:relative;
         //width: 100%;
         height: 100%;
         background-size: contain;
         margin: 0 auto;
-        background-position: center;
+        // background-position: center;
         p{
           text-align: center;
           margin:0;
           text-indent: -999px;
         }
         .droppable{
-          border: solid 1px red;
+          // border: solid 1px red;
           position: absolute;
           height: 60px;
           width: 60px;
         }
+
         .ui-state-highlight.droppable{
           border: none;
         }
-        .pitcher{bottom:90px;right:132px;}
-        .catcher{bottom:12px;right:132px;}
+        .pitcher{bottom: 10px;right: 51px;}
+        .catcher{bottom:15px;right:130px;}
 
-        .firstBase{bottom:68px;right:58px;}
-        .secondBase{bottom:160px;right:73px;}
-        .thirdBase{bottom:68px;left:58px;}
-        .shortstop{bottom:160px;left:100px;}
+        .firstBase{bottom:50px;right:8px;}
+        .thirdBase{bottom:50px;left:8px;}
 
-        .leftField{top:23px;left:15px;}
-        .centerField{top:10px;right:130px;}
-        .rightField{top:23px;right:15px;}
+        .secondBase{bottom:80px;right:80px;}
+        .shortstop{bottom:80px;left:80px;}
 
+        .leftField{top:85px;left:15px;}
+        .centerField{top: 84px; right: 142px;}
+        .rightField{top:85px;right:15px;}
+
+        .layer1{
+          width:50px;
+          height:50px;
+        }
+        .layer2{
+          width:40px;
+          height:40px;
+        }
+        .layer3{
+          width:30px;
+          height:30px;
+        }
+        .layer4{
+          width:20px;
+          height:20px;
+        }
 
         .fielder{
           position:absolute;
-          width:40px;
-          height:40px;
           z-index: 2;
           -webkit-border-top-right-radius: 9999px;
           -webkit-border-bottom-right-radius: 9999px;

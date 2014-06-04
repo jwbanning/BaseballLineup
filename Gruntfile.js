@@ -77,6 +77,7 @@ module.exports = function( grunt ) {
           'configs/**/*',
           'assets/**/*',
           'messages/**/*',
+          'mock/**/*',
           'config.xml'
         ]
       }
