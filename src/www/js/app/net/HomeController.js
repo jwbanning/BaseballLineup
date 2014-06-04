@@ -6,8 +6,8 @@ define(function(require) {
       Promise = require('lavaca/util/Promise'),
       BattingOrderView = require('app/ui/views/BattingOrderView'),
       AvailableView = require('app/ui/views/availablePlayersView'),
-      FieldView = require('app/ui/views/fieldView'),
-      teamCollection = require('app/models/teamCollection'),
+      FieldView = require('app/ui/views/FieldView'),
+      teamCollection = require('app/models/TeamCollection'),
       Model = require('lavaca/mvc/Model');
       var m = new teamCollection();
       var p = m;
