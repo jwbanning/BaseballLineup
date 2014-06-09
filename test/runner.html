@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Runner</title>
+    <link rel="stylesheet" href="../node_modules/grunt-amd-test/tasks/lib/jasmine.css">
+    <script src="../node_modules/grunt-amd-test/tasks/lib/jasmine.js"></script>
+    <script src="../node_modules/grunt-amd-test/tasks/lib/jasmine-html.js"></script>
+    <script src="../node_modules/grunt-amd-test/tasks/lib/es5-shim.js"></script>
+    <script src="../node_modules/grunt-amd-test/tasks/lib/require.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    <script>
+      require(
+       {
+    "baseUrl": "../src/www/js",
+    "paths": {
+        "es5-shim": "../components/es5-shim/es5-shim",
+        "$": "../components/jquery/jquery",
+        "jquery": "../components/jquery/jquery",
+        "hammer": "../components/hammerjs/dist/jquery.hammer",
+        "mout": "../components/mout/src",
+        "dust": "../components/dustjs-linkedin/dist/dust-full-2.0.4",
+        "dust-helpers": "../components/dustjs-linkedin-helpers/dist/dust-helpers-1.1.1",
+        "rdust": "../components/require-dust/require-dust",
+        "iScroll": "../components/iscroll/dist/iscroll-lite-min",
+        "lavaca": "../components/lavaca/src"
+    },
+    "shim": {
+        "$": {
+            "exports": "$"
+        },
+        "jquery": {
+            "exports": "$"
+        },
+        "hammer": {
+            "deps": [
+                "$"
+            ],
+            "exports": "hammer"
+        },
+        "dust": {
+            "exports": "dust"
+        },
+        "dust-helpers": {
+            "deps": [
+                "dust"
+            ]
+        }
+    },
+    "mainConfigFile": "src/www/js/app/boot.js",
+    "optimize": "none",
+    "keepBuildDir": true,
+    "locale": "en-us",
+    "useStrict": false,
+    "skipModuleInsertion": false,
+    "findNestedDependencies": false,
+    "removeCombined": false,
+    "preserveLicenseComments": false,
+    "logLevel": 0
+}
+      );
+    </script>
+    <script>
+      require(
+       [
+    "unit/HomeController.js"
+],
+       function() {
+        if (window.QUnit) {
+         QUnit.start();
+        }
+        else if (window.jasmine) {
+         var jasmineEnv = jasmine.getEnv();
+         jasmineEnv.updateInterval = 1000;
+         var htmlReporter = new jasmine.HtmlReporter();
+         jasmineEnv.addReporter(htmlReporter);
+         jasmineEnv.execute();
+        }
+       }
+      );
+    </script>
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+  </body>
+</html>

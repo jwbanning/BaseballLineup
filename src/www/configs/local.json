@@ -1,3 +1,9 @@
 {
-  "example": "value - local"
+ "api_url": "https://api.parse.com/1/{0}",
+ "mock_url": "/assets/mock/{0}.json",
+ "googleMaps": "AIzaSyBNfnzxRTDyHuR7Ws5tncjX5JN0hz5OMss",
+ "parseApplicationKey": "T4LDQtT82oD0EULOwhpbiYvDUFtr8CUe55jQC3TH",
+ "parseJsKey": "X4ygZacdfzXxtygxeUA0MZVJ0T8fqubYGCiaE7A7",
+ "parseRestKey": "4VlL2k0lsldGwAydVkvsaaOQwodVvy9xlGqAeqYk",
+ "ConsumerKey": "Gx24Ij-_g9fqakYBJ6n0BQ"
 }
