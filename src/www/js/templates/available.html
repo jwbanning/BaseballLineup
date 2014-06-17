@@ -1,28 +1,37 @@
 <div class="overflow-scroll">
   <div class="textContent">
     <!--<h1>{@msg key="headline"/}</h1>-->
-    <p>Currently this lists all the Players</p>
-    <p>At some point I would like to hook this up to consider the current lineup, so only those on the bench would be displayed.</p>
-    <p>I would also like to have the ability to Sort the recordset</p>
+    <p>Currently this lists those players not in the line up</p>
+    <p>Sorting will be available below</p>
+  </div>
+  <div class="sortContainer">
+    <ul>
+      <li>position</li>
+      <li>throws</li>
+      <li>bats</li>
+    </ul>
   </div>
 
 <!--check the count coming back from the model
 -->
 
   <ul>
-    {@contextDump to="console" /}
     {#player}
-      <li>
-        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
-        <div class='metaContainer'>
-          <span class="playerName">{Name}</span>
-          <span class="fieldingPosition">{Positions}</span>
-          <div class="statsContainer">
-            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
-            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
-          </div>
-        </div>
-      </li>
+      {@select key=inTheField}
+        {@lt value=0}
+          <li>
+            <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
+            <div class='metaContainer'>
+              <span class="playerName">{Name}</span>
+              <span class="fieldingPosition">{Positions}</span>
+              <div class="statsContainer">
+                <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+                <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+              </div>
+            </div>
+          </li>
+        {/lt}
+      {/select}
     {/player}
   </ul>
   <!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->

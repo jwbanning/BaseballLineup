@@ -10,8 +10,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 .view.available{
 	.textContent{
-		height: 120px;
+		height: 60px;
 		width: 100%;
+	}
+	.sortContainer{
+		height: 50px;
+		width:100%;
+		background-color: #ccc;
+		ul{
+			height: 50px;
+			li{
+				display:inline-block;
+				line-height: 30px;
+				width:33%;
+				text-transform: uppercase;
+				border-bottom: none;
+				text-align: center;
+				&:first-child{
+					border-top: none;
+				}
+			}
+		}
 	}
 	ul{
 		width: 100%;

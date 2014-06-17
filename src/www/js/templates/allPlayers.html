@@ -1,0 +1,34 @@
+<div class="overflow-scroll">
+  <div class="textContent">
+    <!--<h1>{@msg key="headline"/}</h1>-->
+    <p>Currently listing ALL players </p>
+    <p>Sorting will be available below</p>
+  </div>
+  <div class="sortContainer">
+    <ul>
+      <li>position</li>
+      <li>throws</li>
+      <li>bats</li>
+    </ul>
+  </div>
+
+<!--check the count coming back from the model
+-->
+
+  <ul>
+    {#player}
+      <li>
+        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
+        <div class='metaContainer'>
+          <span class="playerName">{Name}</span>
+          <span class="fieldingPosition">{Positions}</span>
+          <div class="statsContainer">
+            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+          </div>
+        </div>
+      </li>
+    {/player}
+  </ul>
+  <!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
+</div>

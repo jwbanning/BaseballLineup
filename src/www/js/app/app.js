@@ -22,6 +22,7 @@ define(function(require) {
     // Add routes
     this.router.add({
       '/': [HomeController, 'index'],
+      '/all_player': [HomeController, 'all_players'],
       '/batting_order': [HomeController, 'batting_order'],
       '/available_player': [HomeController, 'available_players'],
       '/field': [HomeController, 'field']

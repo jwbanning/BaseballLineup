@@ -4,6 +4,7 @@ define(function(require) {
       BaseController = require('app/net/BaseController'),
       stateModel = require('app/models/StateModel'),
       Promise = require('lavaca/util/Promise'),
+      AllPlayersView = require('app/ui/views/AllPlayersView'),
       BattingOrderView = require('app/ui/views/BattingOrderView'),
       AvailablePlayersView = require('app/ui/views/AvailablePlayersView'),
       FieldView = require('app/ui/views/FieldView'),
@@ -57,6 +58,23 @@ define(function(require) {
         .view(null, FieldView, p, viewProperties)
         .then(this.updateState(model, 'Who is Where', params.url));
     },
+    all_players: function(params, model) {
+      if (!model) {
+        model = {};
+      }
+      var viewProperties = {
+        pageTransition: {
+          'in': 'pt-page-rotatePullRight pt-page-delay180',
+          'out': 'pt-page-rotatePushLeft',
+          'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
+          'outReverse': 'pt-page-rotatePushRight'
+        },
+        sort: 'Name'
+      };
+      return this
+        .view(null, AllPlayersView, p, viewProperties)
+        .then(this.updateState(model, 'All Players', params.url));
+    },
     available_players: function(params, model) {
       if (!model) {
         model = {};
@@ -73,7 +91,7 @@ define(function(require) {
       // teamCollection.sort('battingPosition', false);
       return this
         .view(null, AvailablePlayersView, p, viewProperties)
-        .then(this.updateState(model, 'Available Players', params.url));
+        .then(this.updateState(model, 'Available - Bench', params.url));
     },
     batting_order: function(params, model) {
       if (!model) {
