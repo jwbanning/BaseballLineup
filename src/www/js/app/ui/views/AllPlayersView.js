@@ -12,6 +12,9 @@ define(function(require) {
     this.mapEvent({
       'model': {
         'change': this.redrawView.bind(this)
+      },
+      '.sortContainer ul li' : {
+        tap : this.sortPlayers.bind(this)
       }
 
     });
@@ -33,6 +36,11 @@ define(function(require) {
     },
     redrawView:function() {
       this.redraw();
+    },
+    sortPlayers: function(e){
+      var sortVal = $(e.currentTarget).attr('id');
+     this.model.sort(sortVal);
+     this.model.trigger('change');
     }
 
   });

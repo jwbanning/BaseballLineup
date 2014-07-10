@@ -9,9 +9,8 @@ define(function(require) {
       AvailablePlayersView = require('app/ui/views/AvailablePlayersView'),
       FieldView = require('app/ui/views/FieldView'),
       TeamCollection = require('app/models/TeamCollection'),
+      BatterCollection = require('app/models/BatterCollection'),
       Model = require('lavaca/mvc/Model');
-      var m = new TeamCollection();
-      var p = m;
 
   /**
    * Home controller
@@ -51,11 +50,10 @@ define(function(require) {
           'out': 'pt-page-rotatePushLeft',
           'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
           'outReverse': 'pt-page-rotatePushRight'
-        },
-        sort: 'Name'
+        }
       };
       return this
-        .view(null, FieldView, p, viewProperties)
+        .view(null, FieldView, TeamCollection, viewProperties)
         .then(this.updateState(model, 'Who is Where', params.url));
     },
     all_players: function(params, model) {
@@ -68,11 +66,10 @@ define(function(require) {
           'out': 'pt-page-rotatePushLeft',
           'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
           'outReverse': 'pt-page-rotatePushRight'
-        },
-        sort: 'Name'
+        }
       };
       return this
-        .view(null, AllPlayersView, p, viewProperties)
+        .view(null, AllPlayersView, TeamCollection, viewProperties)
         .then(this.updateState(model, 'All Players', params.url));
     },
     available_players: function(params, model) {
@@ -85,12 +82,11 @@ define(function(require) {
           'out': 'pt-page-rotatePushLeft',
           'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
           'outReverse': 'pt-page-rotatePushRight'
-        },
-        sort: 'Name'
+        }
       };
       // teamCollection.sort('battingPosition', false);
       return this
-        .view(null, AvailablePlayersView, p, viewProperties)
+        .view(null, AvailablePlayersView, TeamCollection, viewProperties)
         .then(this.updateState(model, 'Available - Bench', params.url));
     },
     batting_order: function(params, model) {
@@ -103,12 +99,11 @@ define(function(require) {
           'out': 'pt-page-rotatePushLeft',
           'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
           'outReverse': 'pt-page-rotatePushRight'
-        },
-        sort: 'battingPosition'
+        }
       };
-      // teamCollection.sort('battingPosition', false);
+      var model = new BatterCollection();
       return this
-        .view(null, BattingOrderView, p, viewProperties)
+        .view(null, BattingOrderView, model, viewProperties)
         .then(this.updateState(model, 'Current Batting Order', params.url));
     }
   });

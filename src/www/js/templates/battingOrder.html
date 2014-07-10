@@ -10,41 +10,20 @@
   </div>
 
   <ul>
-    {#player}
-      {?battingPosition}
-        {@select key=battingPosition}
-          {@gt value=0}
-            <li id="{Id}" data-position="{$idx}">
-              <div class="battingPosition">{battingPosition}</div>
-              <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
-              <div class='metaContainer'>
-                <span class="playerName">{Name}</span>
-                <span class="fieldingPosition">{Positions}</span>
-                <div class="statsContainer">
-                  <span class="throws"><span class="label">Throws:</span> {Throws}</span>
-                  <span class="bats"><span class="label">Bats:</span> {Bats}</span>
-                </div>
-              </div>
-            </li>
-          {/gt}
-        {/select}
-      {:else}
-            <li id="NA" data-position="0">
-              <div class="battingPosition">N/A</div>
-              <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
-              <div class='metaContainer'>
-                <span class="playerName">Not Set</span>
-                <span class="fieldingPosition">N/A</span>
-                <div class="statsContainer">
-                  <span class="throws"><span class="label">Throws:</span> N/A</span>
-                  <span class="bats"><span class="label">Bats:</span> N/A</span>
-                </div>
-              </div>
-            </li>
-      {/battingPosition}
-
-
-    {/player}
+    {#batter}
+      <li id="{Id}" data-position="{$idx}" data-battingOrder="{battingPosition}">
+        <div class="battingPosition">{battingPosition}</div>
+        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
+        <div class='metaContainer'>
+          <span class="playerName">{Name}</span>
+          <span class="fieldingPosition">{Positions}</span>
+          <div class="statsContainer">
+            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+          </div>
+        </div>
+      </li>
+    {/batter}
   </ul>
   <!--http://askthecssguy.com/articles/baseball-card-image-captions-with-css-and-javascript-near-mint/ -->
 </div>
