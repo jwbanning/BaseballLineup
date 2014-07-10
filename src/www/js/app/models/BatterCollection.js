@@ -6,7 +6,12 @@ define(function(require) {
     Collection.apply(this, arguments);
     _fetch.call(this);
   },{
-    itemsProperty: 'batter'
+    itemsProperty: 'batter',
+    updateBattingOrder:  function(){
+      APIdoc.updateBattingOrder(this.toObject()).success(function(status) {
+        debugger;
+      });
+    }
   });
 
   function _fetch() {

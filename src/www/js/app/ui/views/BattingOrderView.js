@@ -47,32 +47,6 @@ define(function(require) {
     },
     reOrderLineUp:function(e) {
       $(e.currentTarget).addClass('moveable');
-
-
-
-
-
-
-
-
-      //get the id of the Player and need to change in the model
-      var parseId = $(e.currentTarget).attr('id');
-
-      //get the batting position of the Player
-      var battingPos = $(e.currentTarget).attr('data-battingOrder');
-
-      //get the new batting position of where the player was dropped
-
-      //update the batting orders of all other player
-      // for (var i = 0; i < $('ul li').length; i++) {
-      //   var parseId = $( "ul li:nth-child(" + (i+1) + ")").attr('id');
-      //   var newBattingPos = i+1;
-      //   console.log(newBattingPos + ' ' + parseId);
-
-      // };
-
-      //redraw
-
     },
     dragStart:function(e){
       $(e.currentTarget).css('-webkit-transition','all 0 none');
@@ -91,7 +65,7 @@ define(function(require) {
         this.model.models[i].set('battingPosition', i+1);
       };
       this.redraw();
-
+      this.model.updateBattingOrder();
     }
 
   });

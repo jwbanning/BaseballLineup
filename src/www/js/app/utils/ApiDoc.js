@@ -10,10 +10,23 @@ define(function(require) {
       //var brewery = 'where={"brewery":"'+this.endpoint+'"}'
       return Service.makeRequest('classes/players', '', 'GET');
     },
-    getProfile: function() {
-      var brewery = 'where={"brewery":"'+this.endpoint+'"}'
-      return Service.makeRequest('classes/breweryProfile', brewery, 'GET');
+    updateBattingOrder: function(obj) {
+      var requestArray = [];
+      for (var i = 0; i < obj.batter.length; i++) {
+        var foo =  {
+            "method": "PUT",
+            "path": "classes/players/"+obj.batter[i].objectId,
+            "body": {
+              "battingPosition": obj.batter[i].battingPosition
+            }
+          }
+        requestArray.push(foo);
+      }
+      var request = JSON.stringify(requestArray);
+      var qPut = {"requests": request};
+      return Service.makeRequest('batch', {"request":requestArray}, 'POST');
     },
+    // VINCE CODE AFTER
     removeInventory: function(id) {
       return Service.makeRequest('classes/currentBeers/'+id, null, 'DELETE');
     },
