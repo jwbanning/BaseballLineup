@@ -1,0 +1,25 @@
+<div class="overflow-scroll">
+  <div class="sortContainer">
+    <ul>
+      <li id="Name">name</li>
+      <li id="Positions">position</li>
+      <li id="Throws">throws</li>
+      <li id="Bats">bats</li>
+    </ul>
+  </div>
+  <ul>
+    {#player}
+      <li>
+        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
+        <div class='metaContainer'>
+          <span class="playerName">{Name}</span>
+          <span class="fieldingPosition">{Positions}</span>
+          <div class="statsContainer">
+            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+          </div>
+        </div>
+      </li>
+    {/player}
+  </ul>
+</div>

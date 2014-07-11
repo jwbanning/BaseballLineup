@@ -1,6 +1,7 @@
 define(function(require) {
 
   var BaseView = require('./BaseView');
+      router = require('lavaca/mvc/Router');
   require('rdust!templates/battingOrder');
   /**
    * SetLineup view type
@@ -14,8 +15,10 @@ define(function(require) {
         'change': this.redrawView.bind(this),
         'fetchSuccess': this.onFetchSuccess.bind(this)
       },
-     'ul li .show' : {
+     'ul li' : {
         hold: this.reOrderLineUp.bind(this),
+      },
+      'ul li .show' : {
         dragstart:this.removeBatterDragStart.bind(this),
         drag:this.removeBatterDrag.bind(this),
         dragend:this.removeBatterDragEnd.bind(this)
@@ -36,6 +39,7 @@ define(function(require) {
      * @default 'example'
      */
     template: 'templates/battingOrder',
+    swipeDistance: -100,
     /**
      * A class name added to the view container
      * @property {String} className
@@ -74,7 +78,8 @@ define(function(require) {
       this.model.updateBattingOrder();
     },
     swapPlayer: function(e) {
-      //call the modal to display the availale player to swap. 
+      //call the modal to display the availale player to swap.
+      router.exec('/modalAvailablePlayer', null, null);
     },
     removeBatterDragStart:function(e) {
       $('ul li .show').css('-webkit-transition', 'all 0.3s ease')
@@ -82,18 +87,23 @@ define(function(require) {
     },
     removeBatterDrag:function(e){
       $(e.currentTarget).css('-webkit-transition', 'all 0 ease')
-      if (e.gesture.direction == 'left') {
-        
-        $(e.currentTarget).css('-webkit-transform','translate3d('+ e.gesture.deltaX+'px,'+ 0+'px,'+ 0+ ')').addClass('open');
+      if (e.gesture.direction == 'left' && !$(e.currentTarget).hasClass('open')) {
+        $(e.currentTarget).css('-webkit-transform','translate3d('+ e.gesture.deltaX+'px,'+ 0+'px,'+ 0+ ')')
       }
-      else if (e.gesture.direction == 'right' &&  $(e.currentTarget).hasClass('open')) {
-         $(e.currentTarget).css('-webkit-transform','translate3d('+ -e.gesture.deltaX+'px,'+ 0+'px,'+ 0+ ')').removeClass('open');
+      else if (e.gesture.direction == 'right' && $(e.currentTarget).hasClass('open')) {
+        var m = (this.swipeDistance + e.gesture.deltaX);
+        $(e.currentTarget).css('-webkit-transform','translate3d('+ m+'px,'+ 0+'px,'+ 0+ ')');
       };
     },
     removeBatterDragEnd:function(e) {
       $(e.currentTarget).css('-webkit-transition', 'all 0.3s ease')
       if (e.gesture.distance > 50) {
-        $(e.currentTarget).css('-webkit-transform','translate3d('+ -100+'px,'+ 0+'px,'+ 0+ ')');
+        if (e.gesture.direction == 'left') {
+          $(e.currentTarget).css('-webkit-transform','translate3d('+ this.swipeDistance+'px,'+ 0+'px,'+ 0+ ')').addClass('open');;
+        }
+        else if (e.gesture.direction == 'right') {
+          $(e.currentTarget).css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')').removeClass('open');;
+        };
       }
       else {
         $(e.currentTarget).css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')');

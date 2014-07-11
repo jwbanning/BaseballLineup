@@ -1,6 +1,7 @@
 define(function(require) {
   var History = require('lavaca/net/History');
   var HomeController = require('./net/HomeController');
+  var ModalController = require('./net/ModalController');
   var Connectivity = require('lavaca/net/Connectivity');
   var Application = require('lavaca/mvc/Application');
   var Translation = require('lavaca/util/Translation');
@@ -25,7 +26,8 @@ define(function(require) {
       '/all_player': [HomeController, 'all_players'],
       '/batting_order': [HomeController, 'batting_order'],
       '/available_player': [HomeController, 'available_players'],
-      '/field': [HomeController, 'field']
+      '/field': [HomeController, 'field'],
+      '/modalAvailablePlayer': [ModalController, 'availablePlayers']
     });
     // Initialize messages
     Translation.init('en_US');

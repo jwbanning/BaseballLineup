@@ -1,0 +1,64 @@
+#modal-container{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 888;
+  &.show + #view-root .overflow-scroll{
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  #modal {
+    z-index: 25;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow: hidden;
+    #modal-inner {
+      pointer-events: initial;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+
+#modal-container{
+  background-color: transparent;
+  .transition(all 0.3s linear);
+  -webkit-backface-visibility: hidden;
+  #modal {
+    .transition(all 0.4s ease-out);
+    .transform(translateX(100%));
+  }
+  &.show {
+    background-color: rgba(0,0,0, 0.41);
+    pointer-events: auto;
+    #modal {
+      .transform(translateX(0));
+    }
+    &.dragging{
+      .transition(all 0s linear);
+    }
+  }
+  &.bottom {
+    #modal {
+      .transform(translateY(100%));
+    }
+    &.show {
+      #modal {
+        .transform(translateY(0%));
+      }
+    }
+  }
+}
