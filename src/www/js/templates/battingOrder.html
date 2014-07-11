@@ -1,26 +1,26 @@
 <div class="overflow-scroll">
-  <div class="textContent">
-    <!--<h1>{@msg key="headline"/}</h1>-->
+<!--   <div class="textContent">
     <p>Lists the current batting order</p>
     <p>At some point I would like to hook this up to be able to drag and drop the order of the batters.</p>
-<!--     RULES:
-    1. The original 9 stay here when dragging between them. 
-    2. If there is no order default to name as the sorting order
-    3. If there is no one -->
-  </div>
 
+  </div> -->
   <ul>
     {#batter}
       <li id="{Id}" data-position="{$idx}" data-battingOrder="{battingPosition}">
-        <div class="battingPosition">{battingPosition}</div>
-        <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
-        <div class='metaContainer'>
-          <span class="playerName">{Name}</span>
-          <span class="fieldingPosition">{Positions}</span>
-          <div class="statsContainer">
-            <span class="throws"><span class="label">Throws:</span> {Throws}</span>
-            <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+        <div class="show">
+          <div class="battingPosition">{battingPosition}</div>
+          <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
+          <div class='metaContainer'>
+            <span class="playerName">{Name}</span>
+            <span class="fieldingPosition">{Positions}</span>
+            <div class="statsContainer">
+              <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+              <span class="bats"><span class="label">Bats:</span> {Bats}</span>
+            </div>
           </div>
+        </div>
+        <div class="hidden">
+          <div class="remove">Remove</div>
         </div>
       </li>
     {/batter}

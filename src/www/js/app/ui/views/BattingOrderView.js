@@ -14,13 +14,19 @@ define(function(require) {
         'change': this.redrawView.bind(this),
         'fetchSuccess': this.onFetchSuccess.bind(this)
       },
-     'ul li' : {
-        hold: this.reOrderLineUp.bind(this)
+     'ul li .show' : {
+        hold: this.reOrderLineUp.bind(this),
+        dragstart:this.removeBatterDragStart.bind(this),
+        drag:this.removeBatterDrag.bind(this),
+        dragend:this.removeBatterDragEnd.bind(this)
       },
       'ul li.moveable' : {
         dragstart:this.dragStart.bind(this),
         drag:this.drag.bind(this),
         dragend:this.dragEnd.bind(this)
+      }, 
+      '.remove' : {
+        tap : this.swapPlayer.bind(this)
       }
     });
   },{
@@ -66,6 +72,32 @@ define(function(require) {
       };
       this.redraw();
       this.model.updateBattingOrder();
+    },
+    swapPlayer: function(e) {
+      //call the modal to display the availale player to swap. 
+    },
+    removeBatterDragStart:function(e) {
+      $('ul li .show').css('-webkit-transition', 'all 0.3s ease')
+      $('ul li .show').css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')').removeClass('open');
+    },
+    removeBatterDrag:function(e){
+      $(e.currentTarget).css('-webkit-transition', 'all 0 ease')
+      if (e.gesture.direction == 'left') {
+        
+        $(e.currentTarget).css('-webkit-transform','translate3d('+ e.gesture.deltaX+'px,'+ 0+'px,'+ 0+ ')').addClass('open');
+      }
+      else if (e.gesture.direction == 'right' &&  $(e.currentTarget).hasClass('open')) {
+         $(e.currentTarget).css('-webkit-transform','translate3d('+ -e.gesture.deltaX+'px,'+ 0+'px,'+ 0+ ')').removeClass('open');
+      };
+    },
+    removeBatterDragEnd:function(e) {
+      $(e.currentTarget).css('-webkit-transition', 'all 0.3s ease')
+      if (e.gesture.distance > 50) {
+        $(e.currentTarget).css('-webkit-transform','translate3d('+ -100+'px,'+ 0+'px,'+ 0+ ')');
+      }
+      else {
+        $(e.currentTarget).css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')');
+      }
     }
 
   });

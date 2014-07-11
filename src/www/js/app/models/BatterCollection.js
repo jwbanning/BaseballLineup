@@ -9,7 +9,6 @@ define(function(require) {
     itemsProperty: 'batter',
     updateBattingOrder:  function(){
       APIdoc.updateBattingOrder(this.toObject()).success(function(status) {
-        debugger;
       });
     }
   });
