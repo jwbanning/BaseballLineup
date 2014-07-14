@@ -14,6 +14,9 @@ define(function(require) {
     this.mapEvent({
       '.sortContainer ul li' : {
         tap : this.sortPlayers.bind(this)
+      },
+      '.closeContainer' : {
+        tap : this.dismiss.bind(this)
       }
     });
   },{

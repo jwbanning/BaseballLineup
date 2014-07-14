@@ -6,8 +6,11 @@ define(function(require) {
       Promise = require('lavaca/util/Promise'),
       AllPlayersView = require('app/ui/views/AllPlayersView'),
       BattingOrderView = require('app/ui/views/BattingOrderView'),
+      // PlayerDetailsView = require('app/ui/views/BattingOrderView'),
+      PlayerDetailsView = require('app/ui/views/PlayerDetailsView'),
       AvailablePlayersView = require('app/ui/views/AvailablePlayersView'),
       FieldView = require('app/ui/views/FieldView'),
+      PlayerModel = require('app/models/PlayerModel'),
       TeamCollection = require('app/models/TeamCollection'),
       BatterCollection = require('app/models/BatterCollection'),
       Model = require('lavaca/mvc/Model');
@@ -105,6 +108,23 @@ define(function(require) {
       return this
         .view(null, BattingOrderView, model, viewProperties)
         .then(this.updateState(model, 'Current Batting Order', params.url));
+    },
+    player_detail: function(params, model) {
+      if (!model) {
+        model = {};
+      }
+      var viewProperties = {
+        pageTransition: {
+          'in': 'pt-page-rotatePullRight pt-page-delay180',
+          'out': 'pt-page-rotatePushLeft',
+          'inReverse': 'pt-page-rotatePullLeft pt-page-delay180',
+          'outReverse': 'pt-page-rotatePushRight'
+        }
+      };
+      var model = PlayerModel;
+      return this
+        .view(null, PlayerDetailsView, model, viewProperties)
+        .then(this.updateState(model, 'Player Details', params.url));
     }
   });
 

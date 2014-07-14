@@ -27,7 +27,8 @@ define(function(require) {
       '/batting_order': [HomeController, 'batting_order'],
       '/available_player': [HomeController, 'available_players'],
       '/field': [HomeController, 'field'],
-      '/modalAvailablePlayer': [ModalController, 'availablePlayers']
+      '/modalAvailablePlayer': [ModalController, 'availablePlayers'],
+      '/player_detail': [HomeController, 'player_detail']
     });
     // Initialize messages
     Translation.init('en_US');

@@ -21,7 +21,8 @@ define(function(require) {
       'ul li .show' : {
         dragstart:this.removeBatterDragStart.bind(this),
         drag:this.removeBatterDrag.bind(this),
-        dragend:this.removeBatterDragEnd.bind(this)
+        dragend:this.removeBatterDragEnd.bind(this),
+        tap :this.playerDetail.bind(this)
       },
       'ul li.moveable' : {
         dragstart:this.dragStart.bind(this),
@@ -108,8 +109,11 @@ define(function(require) {
       else {
         $(e.currentTarget).css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')');
       }
+    },
+    playerDetail:function(e){
+      var playerId = $(e.currentTarget).parent().attr('id');
+      router.exec('/player_detail', null, null);
     }
-
   });
 
   return BattingOrderView;
