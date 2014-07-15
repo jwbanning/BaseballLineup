@@ -79,8 +79,9 @@ define(function(require) {
       this.model.updateBattingOrder();
     },
     swapPlayer: function(e) {
+      this.model.set('playerToRemove', this.model.itemAt($(e.currentTarget).closest('li').data('position')));
       //call the modal to display the availale player to swap.
-      router.exec('/modalAvailablePlayer', null, null);
+      router.exec('/modalAvailablePlayer', null, {model:this.model});
     },
     removeBatterDragStart:function(e) {
       $('ul li .show').css('-webkit-transition', 'all 0.3s ease')

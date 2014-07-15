@@ -17,6 +17,9 @@ define(function(require) {
       },
       '.closeContainer' : {
         tap : this.dismiss.bind(this)
+      },
+      'ul li' : {
+        tap : this.addAndRemove.bind(this)
       }
     });
   },{
@@ -38,6 +41,22 @@ define(function(require) {
       var sortVal = $(e.currentTarget).attr('id');
       this.model.sort(sortVal);
       this.model.trigger('change');
+    },
+    addAndRemove: function(e) {
+      debugger;
+      var playerToAdd = $(e.currentTarget).data('position');
+      var inactivePlayers = this.model.get('inactive');
+
+      for (var i = 0; i < inactivePlayers.length; i++) {
+        if (i == playerToAdd) {
+          var playerModel = inactivePlayers[i];
+        };
+      };
+
+      var playertoRemove = this.model.get('playerToRemove');
+      debugger;
+      this.model.add(playerModel);
+      this.model.remove()
     }
 
   });

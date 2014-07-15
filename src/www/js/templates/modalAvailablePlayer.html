@@ -13,8 +13,8 @@
     </ul>
   </div>
   <ul>
-    {#player}
-      <li>
+    {#inactive}
+      <li data-position="{$idx}">
         <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
         <div class='metaContainer'>
           <span class="playerName">{Name}</span>
@@ -25,6 +25,6 @@
           </div>
         </div>
       </li>
-    {/player}
+    {/inactive}
   </ul>
 </div>
