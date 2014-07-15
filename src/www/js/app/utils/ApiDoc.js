@@ -15,16 +15,16 @@ define(function(require) {
       for (var i = 0; i < obj.batter.length; i++) {
         var foo =  {
             "method": "PUT",
-            "path": "classes/players/"+obj.batter[i].objectId,
+            "path": "/1/classes/players/"+obj.batter[i].objectId,
             "body": {
               "battingPosition": obj.batter[i].battingPosition
             }
           }
         requestArray.push(foo);
       }
-      var request = JSON.stringify(requestArray);
-      var qPut = {"requests": request};
-      return Service.makeRequest('batch', {"request":requestArray}, 'POST');
+      // var request = JSON.stringify(requestArray);
+      // var qPut = {"requests": request};
+      return Service.makeRequest('batch', {"requests":requestArray}, 'POST');
     },
     // VINCE CODE AFTER
     removeInventory: function(id) {
