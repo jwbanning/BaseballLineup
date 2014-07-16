@@ -2,6 +2,9 @@ define(function(require) {
   var Player = require('lavaca/mvc/Model');
   var APIdoc = require('app/utils/ApiDoc');
 
+  // Player = BaseModel.extend(function() {
+  //   BaseModel.apply(this, arguments);
+  // }, {
 
   function _fetch() {
     debugger;
