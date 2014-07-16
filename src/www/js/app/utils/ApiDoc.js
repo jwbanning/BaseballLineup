@@ -10,6 +10,10 @@ define(function(require) {
       //var brewery = 'where={"brewery":"'+this.endpoint+'"}'
       return Service.makeRequest('classes/players', '', 'GET');
     },
+    getPlayerDetails: function(id) {
+      var playerId = 'where={"Id":"'+id+'"}'
+      return Service.makeRequest('classes/players', '', 'GET');
+    },
     updateBattingOrder: function(obj) {
       var requestArray = [];
       for (var i = 0; i < obj.batter.length; i++) {

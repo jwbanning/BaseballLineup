@@ -1,13 +1,66 @@
-.playerDetails{
-  display: block;
-  position: absolute;
-  width: 320px;
-  height:45px;
-  bottom:0px;
-  .scrollContainer{
-      width: 1900px;
-      height: 100%;
-    ul{
+.playerContainer{
+  .inline-header{
+    margin: 0 -5px;
+    min-height: 98px;
+    position: relative;
+    border-bottom: solid 4px #ccd4db;
+    // background: -webkit-gradient(linear,left top,left bottom,color-stop(0.6,#FFF),color-stop(1,#e6e6e6));
+    // background: -webkit-linear-gradient(top,#fff 60%,#e6e6e6 100%);
+    // background: -ms-linear-gradient(top,#fff 60%,#e6e6e6 100%);
+    // background: -moz-linear-gradient(top,#fff 60%,#e6e6e6 100%);
+    // background: linear-gradient(top,#fff 60%,#e6e6e6 100%);
+    border-top: 5px solid #FFF;
+    border-right: 5px solid #FFF;
+    border-left: 5px solid #FFF;
+    .main-img{
+      width: 112px;
+      height: 90px;
+      float: left;
+      margin-right: 8px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .ih-left-container{
+      float: left;
+      width: 190px;
+      h2{
+        margin-right: 0;
+        margin-bottom: 2px;
+        font-weight: bold;
+        color: #373c3f;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 5px 0;
+        height: 18px;
+        background: #FFF;
+      }
+    }
+    .ih-stat-mod{
+      margin-top: 10px;
+      padding-bottom: 28px;
+      float: left;
+      clear: left;
+      height: 60px;
+      margin: 10px 0 0 0;
+      width: 160px;
+      .player-record{
+        height: 50px;
+        width:100%;
+        th{
+          background-color: #f1f1f1!important;
+          padding: 2px;
+          color: #373c3f;
+          text-align: center!important;
+          border-right: 1px solid rgba(204,204,204,.3);
+        }
+        td{
+          padding: 2px;
+          color: #373c3f;
+          text-align: center!important;
+          background-color: transparent!important;
+          border-right: 1px solid rgba(204,204,204,.3);
+        }
+      }
     }
   }
 }

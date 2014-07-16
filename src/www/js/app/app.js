@@ -28,7 +28,7 @@ define(function(require) {
       '/available_player': [HomeController, 'available_players'],
       '/field': [HomeController, 'field'],
       '/modalAvailablePlayer': [ModalController, 'availablePlayers'],
-      '/player_detail': [HomeController, 'player_detail']
+      '/player_detail/{id}': [HomeController, 'player_detail']
     });
     // Initialize messages
     Translation.init('en_US');

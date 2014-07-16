@@ -12,11 +12,26 @@
           <div class="portrait" style="background:url(/assets/img/profile/{Thumbnail}); background-size:contain;" />
           <div class='metaContainer'>
             <span class="playerName">{Name}</span>
-            <span class="fieldingPosition">{Positions}</span>
             <div class="statsContainer">
-              <span class="throws"><span class="label">Throws:</span> {Throws}</span>
+<!--               <span class="throws"><span class="label">Throws:</span> {Throws}</span> -->
               <span class="bats"><span class="label">Bats:</span> {Bats}</span>
             </div>
+          </div>
+          <div class="currentPositionContainer">
+            <span class="currentPosition">
+              {@select key="{inTheField}"}
+                {@eq value="1"}P{/eq}
+                {@eq value="2"}C{/eq}
+                {@eq value="3"}1st{/eq}
+                {@eq value="4"}2nd{/eq}
+                {@eq value="5"}3rd{/eq}
+                {@eq value="6"}SS{/eq}
+                {@eq value="7"}LF{/eq}
+                {@eq value="8"}CF{/eq}
+                {@eq value="9"}RF{/eq}
+                {@default} {/default}
+              {/select}
+            </span>
           </div>
         </div>
         <div class="hidden">

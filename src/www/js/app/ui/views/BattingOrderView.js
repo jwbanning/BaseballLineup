@@ -112,8 +112,9 @@ define(function(require) {
       }
     },
     playerDetail:function(e){
+      debugger;
       var playerId = $(e.currentTarget).parent().attr('id');
-      router.exec('/player_detail', null, null);
+      router.exec('/player_detail/' + playerId , null, null);
     }
   });
 
