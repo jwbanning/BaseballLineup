@@ -11,8 +11,8 @@ define(function(require) {
       return Service.makeRequest('classes/players', '', 'GET');
     },
     getPlayerDetails: function(id) {
-      var playerId = 'where={"Id":"'+id+'"}'
-      return Service.makeRequest('classes/players', '', 'GET');
+      var playerId = 'where={"Id":'+ id+'}';
+      return Service.makeRequest('classes/players/', playerId, 'GET');
     },
     updateBattingOrder: function(obj) {
       var requestArray = [];

@@ -1,20 +1,12 @@
 <div class="playerContainer">
-  <div id="content" class="clearfix"> 
+  <div id="content" class="clearfix">
+    {#data}
     <div class="inline-header players-header">
       <div class="main-img">
-        <img src="http://a.espncdn.com/combiner/i?img=%2Fi%2Fheadshots%2Fmlb%2Fplayers%2Ffull%2F31662.png&amp;h=90&amp;w=112&amp;scale=crop" onerror="this.src=&quot;http://a.espncdn.com/i/columnists/nophoto_65x90.gif&quot;;" width="112" height="90">
+        <img src="assets/img/headshot/chip.png" width="112" height="90">
       </div>
       <div class="ih-left-container">
-        <h2>#27 Jose Altuve</h2>
-        <div class="players-team">
-          <a class="pt-logo" href="http://m.espn.go.com/mlb/clubhouse?teamId=18">
-            <div class="logo-small logo-mlb-small mlb-small-18"></div>
-            <div class="logo-medium logo-mlb-medium mlb-medium-18"></div>
-          </a>
-          <div class="clr"></div>
-          <!-- <a href="http://m.espn.go.com/mlb/clubhouse?teamId=18">Houston Astros</a> -->
-          <!-- <span>2014 Record: 40-56</span> -->
-        </div>
+        <h2>#{JerseyNum} {Name}</h2>
         <div class="ih-stat-mod">
           <table class="player-record">
             <tbody>
@@ -24,7 +16,7 @@
                 <th>RBI</th>
               </tr>
               <tr>
-                <td>.335</td>
+                <td>{BA}</td>
                 <td>2</td>
                 <td>27</td>
               </tr>
@@ -36,5 +28,6 @@
     <div>
       THE FIELD GOES HERE
     </div>
+    {/data}
   </div>
 </div>

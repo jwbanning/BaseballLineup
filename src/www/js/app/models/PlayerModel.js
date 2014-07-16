@@ -1,18 +1,20 @@
 define(function(require) {
-  var Player = require('lavaca/mvc/Model');
+  var Model = require('lavaca/mvc/Model');
   var APIdoc = require('app/utils/ApiDoc');
 
-  // Player = BaseModel.extend(function() {
-  //   BaseModel.apply(this, arguments);
-  // }, {
+  var PlayerModel = Model.extend(function() {
+    Model.apply(this, arguments);
+    _fetch.call(this);
+  },{
+
+  });
 
   function _fetch() {
-    debugger;
-    APIdoc.getPlayerDetails().then(function(response) {
-      this.add(response.results);
+    APIdoc.getPlayerDetails(this.get('id')).then(function(response) {
+      this.set('data', response.results[0]);
       this.trigger('change');
-      this.trigger('fetchSuccess');
     }.bind(this));
   }
-  return new Player();
+
+  return PlayerModel;
 });

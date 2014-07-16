@@ -121,7 +121,8 @@ define(function(require) {
           'outReverse': 'pt-page-rotatePushRight'
         }
       };
-      var model = PlayerModel;
+      var model = new PlayerModel({'id':params.id});
+
       return this
         .view(null, PlayerDetailsView, model, viewProperties)
         .then(this.updateState(model, 'Player Details', params.url));

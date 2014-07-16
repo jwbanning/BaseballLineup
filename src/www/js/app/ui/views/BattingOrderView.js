@@ -111,8 +111,7 @@ define(function(require) {
         $(e.currentTarget).css('-webkit-transform','translate3d('+ 0+'px,'+ 0+'px,'+ 0+ ')');
       }
     },
-    playerDetail:function(e){
-      debugger;
+    playerDetail:function(e){ 
       var playerId = $(e.currentTarget).parent().attr('id');
       router.exec('/player_detail/' + playerId , null, null);
     }
