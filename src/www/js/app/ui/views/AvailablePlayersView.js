@@ -15,8 +15,10 @@ define(function(require) {
       },
       '.sortContainer ul li' : {
         tap : this.sortPlayers.bind(this)
+      },
+      'ul li.availablePlayer' : {
+        tap : this.playerDetail.bind(this)
       }
-
     });
   },{
     /**
@@ -41,6 +43,10 @@ define(function(require) {
       var sortVal = $(e.currentTarget).attr('id');
       this.model.sort(sortVal);
       this.model.trigger('change');
+    },
+     playerDetail:function(e){
+      var playerId = $(e.currentTarget).attr('id');
+      router.exec('/player_detail/' + playerId , null, null);
     }
 
   });
